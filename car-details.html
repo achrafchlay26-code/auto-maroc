@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تفاصيل السيارة - سيارات المغرب</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- نفس شريط التنقل -->
+
+    <main class="container">
+        <div class="car-details-page">
+            <!-- سيتم ملؤها بـ JavaScript -->
+        </div>
+    </main>
+
+    <script>
+        // جلب معرّف السيارة من الرابط
+        const urlParams = new URLSearchParams(window.location.search);
+        const carId = urlParams.get('id');
+        
+        // جلب بيانات السيارة
+        const car = getCarById(parseInt(carId));
+        
+        if (car) {
+            document.querySelector('.car-details-page').innerHTML = `
+                <div class="car-gallery">
+                    <img src="images/cars/${car.images[0] || 'default-car.jpg'}" alt="${car.title}" class="main-image">
+                </div>
+                
+                <div class="car-info-details">
+                    <h1>${car.title}</h1>
+                    <div class="price-big">${car.price.toLocaleString()} ${car.currency}</div>
+                    
+                    <div class="specs-grid">
+                        <div class="spec-item">
+                            <i class="fas fa-calendar"></i>
+                            <span>السنة: ${car.year}</span>
+                        </div>
+                        <div class="spec-item">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <span>المسافة: ${car.mileage.toLocaleString()} كم</span>
+                        </div>
+                        <div class="spec-item">
+                            <i class="fas fa-gas-pump"></i>
+                            <span>الوقود: ${car.fuel}</span>
+                        </div>
+                        <div class="spec-item">
+                            <i class="fas fa-cogs"></i>
+                            <span>ناقل الحركة: ${car.transmission}</span>
+                        </div>
+                        <div class="spec-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>المدينة: ${car.city}</span>
+                        </div>
+                        <div class="spec-item">
+                            <i class="fas fa-car"></i>
+                            <span>الماركة: ${car.brand}</span>
+                        </div>
+                    </div>
+                    
+                    <div class="description">
+                        <h3>الوصف</h3>
+                        <p>${car.description}</p>
+                    </div>
+                    
+                    <div class="contact-seller">
+                        <h3>اتصال بالبائع</h3>
+                        <div class="contact-info">
+                            <p><i class="fas fa-phone"></i> ${car.phone}</p>
+                            <button class="whatsapp-btn">
+                                <i class="fab fa-whatsapp"></i>
+                                تواصل عبر واتساب
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+    </script>
+</body>
+</html>
