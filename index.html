@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سيارات مستعملة في المغرب | بيع وشراء</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- شريط التنقل -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-car"></i>
+                <span>سيارات المغرب</span>
+            </a>
+            
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">الرئيسية</a></li>
+                <li><a href="cars.html">تصفح السيارات</a></li>
+                <li><a href="add-car.html">أضف سيارتك</a></li>
+                <li><a href="contact.html">اتصل بنا</a></li>
+                <li class="language-switch">
+                    <a href="#">FR</a> | <a href="#" class="active">AR</a>
+                </li>
+            </ul>
+            
+            <button class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- قسم الهيرو -->
+    <header class="hero">
+        <div class="container">
+            <h1>ابحث عن سيارتك المستعملة في المغرب</h1>
+            <p>أكبر سوق لبيع وشراء السيارات المستعملة في جميع مدن المغرب</p>
+            
+            <!-- نموذج البحث -->
+            <div class="search-box">
+                <div class="search-row">
+                    <select id="city">
+                        <option value="">جميع المدن</option>
+                        <option value="casablanca">الدار البيضاء</option>
+                        <option value="rabat">الرباط</option>
+                        <option value="marrakech">مراكش</option>
+                        <option value="fes">فاس</option>
+                        <option value="tanger">طنجة</option>
+                    </select>
+                    
+                    <select id="brand">
+                        <option value="">جميع الماركات</option>
+                        <option value="renault">رينو</option>
+                        <option value="dacia">داسيا</option>
+                        <option value="peugeot">بيجو</option>
+                        <option value="citroen">سيتروين</option>
+                        <option value="mercedes">مرسيدس</option>
+                        <option value="bmw">بي إم دبليو</option>
+                    </select>
+                    
+                    <select id="price">
+                        <option value="">السعر</option>
+                        <option value="0-50000">أقل من 50,000 درهم</option>
+                        <option value="50000-100000">50,000 - 100,000 درهم</option>
+                        <option value="100000-200000">100,000 - 200,000 درهم</option>
+                        <option value="200000+">أكثر من 200,000 درهم</option>
+                    </select>
+                </div>
+                
+                <button class="search-btn">
+                    <i class="fas fa-search"></i>
+                    ابحث عن سيارة
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- أحدث السيارات -->
+    <section class="latest-cars">
+        <div class="container">
+            <h2 class="section-title">أحدث السيارات المضافة</h2>
+            
+            <div class="cars-grid" id="cars-container">
+                <!-- السيارات سيتم تحميلها بواسطة JavaScript -->
+            </div>
+            
+            <a href="cars.html" class="view-all-btn">عرض جميع السيارات</a>
+        </div>
+    </section>
+
+    <!-- إحصائيات -->
+    <section class="stats">
+        <div class="container">
+            <div class="stat-item">
+                <i class="fas fa-car"></i>
+                <h3>1,250+</h3>
+                <p>سيارة معروضة</p>
+            </div>
+            <div class="stat-item">
+                <i class="fas fa-city"></i>
+                <h3>25+</h3>
+                <p>مدينة مغربية</p>
+            </div>
+            <div class="stat-item">
+                <i class="fas fa-users"></i>
+                <h3>5,000+</h3>
+                <p>مستخدم نشط</p>
+            </div>
+            <div class="stat-item">
+                <i class="fas fa-check-circle"></i>
+                <h3>850+</h3>
+                <p>صفقة ناجحة</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- فوتر -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>سيارات المغرب</h3>
+                    <p>الوجهة الأولى لبيع وشراء السيارات المستعملة في المغرب</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>روابط سريعة</h3>
+                    <ul>
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="cars.html">تصفح السيارات</a></li>
+                        <li><a href="add-car.html">أضف سيارتك</a></li>
+                        <li><a href="contact.html">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>المدن الرئيسية</h3>
+                    <ul>
+                        <li><a href="#">الدار البيضاء</a></li>
+                        <li><a href="#">الرباط</a></li>
+                        <li><a href="#">مراكش</a></li>
+                        <li><a href="#">فاس</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>تواصل معنا</h3>
+                    <p><i class="fas fa-phone"></i> 06 12 34 56 78</p>
+                    <p><i class="fas fa-envelope"></i> contact@moroccocars.ma</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2023 سيارات المغرب. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/cars-data.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
