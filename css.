@@ -1,0 +1,114 @@
+/* car-details.html */
+.car-details-page {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin: 40px 0;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+.car-gallery {
+    position: relative;
+}
+
+.main-image {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    height: 400px;
+}
+
+.car-info-details h1 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.price-big {
+    font-size: 2rem;
+    color: var(--secondary-color);
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.specs-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.spec-item {
+    background: var(--light-color);
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.spec-item i {
+    color: var(--accent-color);
+    margin-left: 10px;
+    font-size: 1.2rem;
+}
+
+.description {
+    margin-bottom: 30px;
+}
+
+.description h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.contact-seller {
+    border-top: 2px solid #eee;
+    padding-top: 20px;
+}
+
+.contact-info {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.contact-info p {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.contact-info i {
+    margin-left: 10px;
+    color: var(--success-color);
+}
+
+.whatsapp-btn {
+    background-color: #25D366;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+}
+
+.whatsapp-btn i {
+    margin-left: 10px;
+    font-size: 1.2rem;
+}
+
+@media (max-width: 992px) {
+    .car-details-page {
+        grid-template-columns: 1fr;
+    }
+    
+    .specs-grid {
+        grid-template-columns: 1fr;
+    }
+}
